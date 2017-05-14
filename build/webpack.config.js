@@ -15,7 +15,7 @@ var  AddResolve = (obj)=>{
 //webpack配置文件
 module.exports =  {
         context:path.resolve(__dirname,'../'),
-        watch:process.env['NODE_ENV']!='prod',
+        watch: true,
         entry: {
             index:'./js/index/index.js',
             manage:"./js/manage/index.js",
@@ -32,7 +32,7 @@ module.exports =  {
         // debug: true,
         devtool: 'source-map',
         output: {
-            path: path.resolve(__dirname,'../dist/'),
+            path: path.resolve(process.cwd(),'dist/'),
             filename: '[name].js',
             chunkFilename: '[name].min.js',
             publicPath: ''
